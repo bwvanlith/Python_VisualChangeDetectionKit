@@ -27,11 +27,11 @@
 
 ## About The Project
 
-This project is based on a previous solution to automatically detect changes in nightly game builds. During game development in large teams, either in-house or, partially, distributed teams, it is difficult, if not impossible, to keep track of visual changes coming from daily changes to your assets, light builds, performance optimizations, and so on.
+This project is based on a previous solution to automatically detect changes in nightly builds of projects in real-time engines. During game development in large teams, either in-house or, partially, distributed teams, it is difficult, if not impossible, to keep track of visual changes coming from daily changes to your assets, light builds, performance optimizations, and so on.
 
 I order to automatically detect changes, I made this solution: When you make builds, whether it's daily or at irregular intervals, it is possible to have a preset camera run through your game environment at a constant speed, roughly mimicking the player's point of view. When start to render or play this camera from the command line (see the documentation of your game engine of choice), the first script will start capturing screenshots at a regular interval. The second script can be run separately afterwards, which will then compare the new image folder to one that you set as reference.
 
-The image hashing function will also allow for a relative comparison threshold, in order to counter any changes to the camera pov, fov, and so on. Whether or not a certain threshold allows for any particular changes to not to pass as a detected change, needs to be tested in the specific situation.
+The image hashing allows for a relative comparison threshold, in order to counter any changes to the camera pov, fov, and so on. Whether or not a certain threshold allows for any particular changes to not to pass as a detected change, needs to be tested in the specific situation.
 
 Lastly, this kit's end goal is to output a text file with links to images that are regarded as changed. A later feature will be an option to format this, in order to click and view the image in question (without having to copy & paste the link).
 
@@ -41,15 +41,19 @@ Feel free to ask any questions, request features or fork - all according to the 
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Kit Prerequisites
 
 Current dependencies are the following python modules:
 `pyautogui`, `datetime`, `time`, `psutil`
 
+### Setting Up The Kit
 
-### Installation
+This section will describe how to set the python script variables for your own situation.
 
-To execute the Python script from a Windows batch file, you can follow these steps:
+
+### Running Along With a Target Application
+
+A straightforward solution to autorun both your target app (real-time engine) and the capture script is to create a batch file and run both the script and application with one click. To execute the Python script from a Windows batch file, you can follow these steps:
 
 1. Create a new text file and open it in a text editor.
 
