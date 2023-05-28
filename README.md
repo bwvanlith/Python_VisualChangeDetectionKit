@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/bwvanlith/Python_ImageHashing">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/flowchart.png" alt="Logo" width="qqww" height="667">
   </a>
 
   <h3 align="center">A kit for detecting changes in game builds, comparing images and report detected changes.</h3>
